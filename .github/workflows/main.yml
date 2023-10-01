@@ -25,3 +25,7 @@ jobs:
         run: |
           python.exe portable-msvc.py  --msvc-version 14.37 --sdk-version 22621
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: msvc1437-22621downloaded.zip
+          path: .
