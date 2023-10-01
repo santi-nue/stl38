@@ -20,6 +20,8 @@ jobs:
         with:
           python-version: '3.10'
       - name: Download msvc
+        # MSVC versions: 14.29 14.30 14.31 14.32 14.33 14.34 14.35 14.36 14.37
+        # Windows SDK versions: 18362 19041 20348 22000 22621
         run: |
-          python.exe portable-msvc.py  --show-versions
+          python.exe portable-msvc.py  --msvc-version 14.37 --sdk-version 22621
 
